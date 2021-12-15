@@ -307,7 +307,7 @@ class DBParser(object):
 			perm = Permission(b, p, flags)
 		except FlagError as e:
 			self._syntax_error("Invalid flag '%s'" % e.flag)
-		for cname, c in self._current_countries.iteritems():
+		for cname, c in self._current_countries.items():
 			if perm in c:
 				self._warn('Rule "%s, %s" added to "%s" twice' % (
 							  bname, pname, cname))
