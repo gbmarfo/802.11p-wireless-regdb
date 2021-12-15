@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from cStringIO import StringIO
+from io import StringIO
 import struct
 import hashlib
 from dbparse import DBParser
@@ -10,7 +10,7 @@ MAGIC = 0x52474442
 VERSION = 19
 
 if len(sys.argv) < 3:
-    print 'Usage: %s output-file input-file [key-file]' % sys.argv[0]
+    print ('Usage: {0} output-file input-file [key-file]', sys.argv[0])
     sys.exit(2)
 
 def create_rules(countries):

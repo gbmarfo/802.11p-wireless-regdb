@@ -104,7 +104,8 @@ class Country(object):
     def __init__(self, dfs_region, permissions=None, comments=None):
         self._permissions = permissions or []
         self.comments = comments or []
-	self.dfs_region = 0
+	
+    self.dfs_region = 0
 
 	if dfs_region:
 		if not dfs_region in dfs_regions:
