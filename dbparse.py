@@ -106,8 +106,8 @@ class Country(object):
         self.comments = comments or []
 	
     self.dfs_region = 0
-
-	if dfs_region:
+    
+    if dfs_region:
 		if not dfs_region in dfs_regions:
 		    raise DFSRegionError(dfs_region)
 		self.dfs_region = dfs_regions[dfs_region]
