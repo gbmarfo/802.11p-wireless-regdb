@@ -305,7 +305,7 @@ class DBParser(object):
 		p = self._power[pname]
 		try:
 			perm = Permission(b, p, flags)
-		except FlagError, e:
+		except FlagError as e:
 			self._syntax_error("Invalid flag '%s'" % e.flag)
 		for cname, c in self._current_countries.iteritems():
 			if perm in c:
