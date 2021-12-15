@@ -49,7 +49,7 @@ class PTR(object):
         return self._offset
 
 p = DBParser()
-countries = p.parse(file(sys.argv[2]))
+countries = p.parse(open(sys.argv[2]))
 power = []
 bands = []
 for c in countries.itervalues():
